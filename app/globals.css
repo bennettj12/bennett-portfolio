@@ -8,24 +8,30 @@
   --color-primary: #11999E;
   --color-highlight: #30E3CA;
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-start-rgb: #40514E;
+  --background-end-rgb: #40514E;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.inverted {
+  color: var(--color-dark);
+  background: var(--color-light);
 }
+.background-primary {
+  background: var(--color-primary);
+}
+.background-highlight {
+  background: var(--color-highlight);
+}
+.background-dark {
+  background: var(--color-dark);
+}
+.text-light {
+  color: var(--color-light)
+}
+
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  
+  color: var(--color-light);
+  background: var(--color-dark);
 }
