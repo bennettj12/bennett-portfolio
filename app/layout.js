@@ -1,9 +1,9 @@
-import { Nunito } from 'next/font/google'
+import { Red_Hat_Display } from 'next/font/google'
 import './globals.css'
 
-const nunito = Nunito({
+const redhat = Red_Hat_Display({
   subsets: ['latin'],
-  weight: ['200', '400', '700' ]
+  weight: ['variable' ]
 })
 
 export const metadata = {
@@ -14,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={nunito.className}>{children}</body>
+      <body className={redhat.className}>{children}</body>
     </html>
   )
 }

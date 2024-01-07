@@ -3,21 +3,25 @@
 @tailwind utilities;
 
 :root {
-  --color-dark: #40514E;
-  --color-light: #E4F9F5;
-  --color-primary: #11999E;
-  --color-highlight: #30E3CA;
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: #40514E;
-  --background-end-rgb: #40514E;
+  --color-dark: #382727;
+  --color-light: #FCF5ED;
+  --color-primary: #CE5A67;
+  --color-highlight: #F4BF96;
 }
 
 .inverted {
   color: var(--color-dark);
+  background: var(--color-highlight);
+}
+.background-light {
   background: var(--color-light);
 }
 .background-primary {
   background: var(--color-primary);
+}
+.background-gradient {
+  background: var(--color-highlight);
+  background: linear-gradient(5deg, var(--color-primary) -50%, var(--color-highlight)100%);
 }
 .background-highlight {
   background: var(--color-highlight);
@@ -28,10 +32,37 @@
 .text-light {
   color: var(--color-light)
 }
-
+.text-primary {
+  color: var(--color-primary)
+}
+.text-dark {
+  color: var(--color-dark)
+}
+.border-highlight {
+  border-color: var(--color-highlight);
+}
+.border-light {
+  border-color: var(--color-light);
+}
+.border-t-16 {
+  border-top-width: 16px;
+}
+.brush-rotate {
+  transform: rotate(-110deg);
+}
+.portfolio-list li {
+  transition: all 0.45s cubic-bezier(.88,0,.56,1);
+}
+.portfolio-list li:hover {
+  background: var(--color-highlight);
+  padding-left: 12rem;
+  transition: all 0.45s cubic-bezier(.88,0,.56,1);
+  cursor: pointer;
+  
+}
 
 body {
   
-  color: var(--color-light);
+  color: var(--color-highlight);
   background: var(--color-dark);
 }
